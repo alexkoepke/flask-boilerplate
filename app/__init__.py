@@ -9,7 +9,7 @@ from flask_migrate import Migrate
 from flask_moment import Moment
 from flask_babel import Babel
 from flask_bootstrap import Bootstrap
-from instance.config import Config
+from config import Config
 
 db = SQLAlchemy()
 bootstrap = Bootstrap()
