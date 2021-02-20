@@ -8,26 +8,29 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_moment import Moment
 from flask_babel import Babel
-from flask_bootstrap import Bootstrap
+# from flask_bootstrap import Bootstrap
 from config import Config
+from flask_static_digest import FlaskStaticDigest
 
 db = SQLAlchemy()
-bootstrap = Bootstrap()
+# bootstrap = Bootstrap()
 migrate = Migrate()
 moment = Moment()
 babel = Babel()
+flask_static_digest = FlaskStaticDigest()
 
 
 def create_app(config_class=Config):
     # create and configure the app
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='./public', static_url_path='')
     app.config.from_object(config_class)
 
     db.init_app(app)
     migrate.init_app(app, db)
-    bootstrap.init_app(app)
+    # bootstrap.init_app(app)
     moment.init_app(app)
     babel.init_app(app)
+    flask_static_digest.init_app(app)
     # TODO: Make these optional with env var
     # login.init_app(app)
     # mail.init_app(app)

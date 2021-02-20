@@ -9,9 +9,11 @@
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+        <link rel="stylesheet" href="{{ static_url_for('static', filename='css/app.css') }}">
         {% block styles %}
         <!-- Bootstrap CSS -->
-        {{ bootstrap.load_css() }}
+{#        {{ bootstrap.load_css() }}#}
+{#            {{ url_ }}#}
         {% endblock %}
 
         {% if title %}
@@ -77,10 +79,11 @@
     {% endblock %}
 
     {% block scripts %}
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     <!-- Optional JavaScript -->
-        {{ bootstrap.load_js() }}
-        {{ moment.include_moment() }}
-        {{ moment.lang(g.locale) }}
+{#        {{ bootstrap.load_js() }}#}
+{#        {{ moment.include_moment() }}#}
+{#        {{ moment.lang(g.locale) }}#}
         <script>
             function translate(sourceElem, destElem, sourceLang, destLang) {
                 $(destElem).html('<img src="{{ url_for('static', filename='loading.gif') }}">');

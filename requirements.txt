@@ -1,4 +1,4 @@
-Bootstrap-Flask
+
 click
 Flask
 Flask-Babel
@@ -8,9 +8,8 @@ Flask-Migrate
 Flask-Moment
 Flask-SQLAlchemy
 Flask-WTF
+Flask-Static-Digest
 requests
-itsdangerous==1.1.0
-MarkupSafe==1.1.1
 python-dotenv
 PyJWT
 WTForms
