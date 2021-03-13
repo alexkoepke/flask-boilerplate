@@ -22,7 +22,7 @@ flask_static_digest = FlaskStaticDigest()
 
 def create_app(config_class=Config):
     # create and configure the app
-    app = Flask(__name__, static_folder='./public', static_url_path='')
+    app = Flask(__name__, static_folder='public/', static_url_path='')
     app.config.from_object(config_class)
 
     db.init_app(app)

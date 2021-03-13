@@ -5,5 +5,5 @@ $(document).ready(function() {
   // place those snippets of code here. Also don't forget to uncomment them
   // in both the modules/bootstrap.js file and in the SCSS at app.scss.
   // For example, to enable tooltips:
-  //   $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
 });
